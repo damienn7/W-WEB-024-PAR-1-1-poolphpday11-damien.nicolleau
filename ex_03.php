@@ -47,13 +47,16 @@ class Soldier
 
     public function doDamage($obj)
     {
-        if(is_a($obj,"Chaos\Soldier"))
+        if(gettype($obj)==="object")
         {
-            $obj->setHp($obj->getHp()-$this->getAttack());
-        }
-        else
-        {
-            return;
+            if(is_a($obj,"Chaos\Soldier"))
+            {
+                $obj->setHp($obj->getHp()-$this->getAttack());
+            }
+            else
+            {
+                return;
+            }
         }
     }
 
@@ -111,15 +114,18 @@ class Soldier
         $this->name=$name;
     }
 
-    public function doDamage(object $obj)
+    public function doDamage($obj)
     {
-        if(is_a($obj,"Imperium\Soldier"))
+        if(gettype($obj)==="object")
         {
-            $obj->setHp($obj->getHp()-$this->getAttack());
-        }
-        else
-        {
-            return;
+            if(is_a($obj,"Imperium\Soldier"))
+            {
+                $obj->setHp($obj->getHp()-$this->getAttack());
+            }
+            else
+            {
+                return;
+            }
         }
     }
 

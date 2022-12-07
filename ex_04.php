@@ -139,8 +139,6 @@ namespace {
         {
             if(gettype($obj)==="object")
             {
-
-            
             if(is_a($obj,"Imperium\Soldier"))
             {
                 echo "Praise be, Emperor, Lord.\n";
@@ -151,6 +149,10 @@ namespace {
                 echo "Xenos spotted.\n";
             }
 
+        }
+        else
+        {
+            return;
         }
         }
     }
