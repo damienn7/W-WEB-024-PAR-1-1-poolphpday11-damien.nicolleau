@@ -36,7 +36,7 @@ class BMW implements iCars
         return $this->_weight;
     }
 
-    public function mineIsBigger($obj)
+    public function mineIsBigger(object $obj)
     {
         if(is_a($obj,"Toyota"))
         {
@@ -83,7 +83,7 @@ class Suzuki implements iCars
         return $this->_weight;
     }
 
-    public function mineIsBigger($obj)
+    public function mineIsBigger(object $obj)
     {
         if(is_a($obj,"Toyota"))
         {
