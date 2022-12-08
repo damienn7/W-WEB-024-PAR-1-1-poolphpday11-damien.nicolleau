@@ -5,10 +5,10 @@ class Soldier
 {
 
     private $hp;
-    private $attack;
-    private $name;
+    private $attack=12;
+    private $name=50;
 
-    public function __construct($name,$attack=12,$hp=50)
+    public function __construct($name,$attack,$hp)
     {
         $this->hp=$hp;
         $this->attack=$attack;
@@ -47,17 +47,7 @@ class Soldier
 
     public function doDamage($obj)
     {
-        if(gettype($obj)==="object")
-        {
-            if(is_a($obj,"Chaos\Soldier"))
-            {
-                $obj->setHp($obj->getHp()-$this->getAttack());
-            }
-            else
-            {
-                return;
-            }
-        }
+        $obj->setHp($obj->getHp()-$this->getAttack());
     }
 
     public function __toString()
@@ -72,12 +62,12 @@ namespace Chaos{
 class Soldier
 {
     
-    private $hp;
-    private $attack;
+    private $hp=70;
+    private $attack=12;
     private $name;
 
 
-    public function __construct($name,$attack=12,$hp=70)
+    public function __construct($name,$attack,$hp)
     {
         $this->hp=$hp;
         $this->attack=$attack;
@@ -116,17 +106,7 @@ class Soldier
 
     public function doDamage($obj)
     {
-        if(gettype($obj)==="object")
-        {
-            if(is_a($obj,"Imperium\Soldier"))
-            {
-                $obj->setHp($obj->getHp()-$this->getAttack());
-            }
-            else
-            {
-                return;
-            }
-        }
+        $obj->setHp($obj->getHp()-$this->getAttack());
     }
 
     public function __toString()
@@ -147,3 +127,4 @@ echo $spaceMarine . "\n";
 echo $chaosSpaceMarine . "\n";
 }
 */
+
